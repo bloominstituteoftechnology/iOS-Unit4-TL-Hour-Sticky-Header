@@ -49,6 +49,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("scrollView.y = \(scrollView.contentOffset.y)")
+        
+        headerView.updateViewForScrollPosition(y: scrollView.contentOffset.y, width: view.bounds.width)
     }
     
 }

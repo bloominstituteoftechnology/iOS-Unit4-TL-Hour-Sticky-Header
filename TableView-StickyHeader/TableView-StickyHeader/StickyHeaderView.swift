@@ -29,7 +29,23 @@ class StickyHeaderView: UIView {
         backgroundColor = .systemBlue
     }
     
-    func  setUpConstraints() {
+    func setUpConstraints() {
         
     }
+    
+    func updateViewForScrollPosition(y: CGFloat, width: CGFloat) {
+        // Update the size
+        var height: CGFloat = -y
+        
+        let minHeight = 100
+        let defaultHeight = 300
+//        if height < minHeight {
+//
+//        }
+        frame = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        
+        // update alpha for animations
+    }
+
 }
