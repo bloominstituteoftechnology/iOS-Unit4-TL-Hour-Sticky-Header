@@ -13,6 +13,7 @@
 		BD7ACD972465C440007EB133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7ACD952465C440007EB133 /* Main.storyboard */; };
 		BD7ACD992465C442007EB133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7ACD982465C442007EB133 /* Assets.xcassets */; };
 		BD7ACD9C2465C442007EB133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7ACD9A2465C442007EB133 /* LaunchScreen.storyboard */; };
+		BD7ACDA42465DC34007EB133 /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7ACDA32465DC34007EB133 /* StickyHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BD7ACD982465C442007EB133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD7ACD9B2465C442007EB133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD7ACD9D2465C442007EB133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD7ACDA32465DC34007EB133 /* StickyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				BD7ACD912465C440007EB133 /* SceneDelegate.swift */,
 				BD7ACD932465C440007EB133 /* ViewController.swift */,
 				BD7ACD952465C440007EB133 /* Main.storyboard */,
+				BD7ACDA32465DC34007EB133 /* StickyHeaderView.swift */,
 				BD7ACD982465C442007EB133 /* Assets.xcassets */,
 				BD7ACD9A2465C442007EB133 /* LaunchScreen.storyboard */,
 				BD7ACD9D2465C442007EB133 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7ACDA42465DC34007EB133 /* StickyHeaderView.swift in Sources */,
 				BD7ACD942465C440007EB133 /* ViewController.swift in Sources */,
 				BD7ACD902465C440007EB133 /* AppDelegate.swift in Sources */,
 				BD7ACD922465C440007EB133 /* SceneDelegate.swift in Sources */,

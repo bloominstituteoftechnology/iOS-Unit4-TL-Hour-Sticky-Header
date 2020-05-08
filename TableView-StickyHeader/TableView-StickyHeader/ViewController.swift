@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    lazy var headerView: StickyHeaderView = {
+        let headerView = StickyHeaderView(frame: CGRect(origin: .zero, size: CGSize(width: view.bounds.width, height: 300)))
+        
+        return headerView
+    }()
+    
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,6 +23,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        setUpViews()
+    }
+    
+    func setUpViews() {
+        view.addSubview(headerView)
     }
 
     // TableViewDataSource
