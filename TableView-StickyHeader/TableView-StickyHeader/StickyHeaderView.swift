@@ -102,11 +102,21 @@ class StickyHeaderView: UIView {
         ])
     }
     
+    var systemSpace: CGFloat = 8
+
+    var minHeight: CGFloat {
+        // FIXME: Why is this off by 1 pixel? Where odes it come from?
+        // FIXME: Put it inside an inner stack view and get the height of that inner stack view
+        return round(cityLabel.frame.height + summaryLabel.frame.height + systemSpace + safeAreaInsets.top + 1 + systemSpace)
+    }
+    
+    let alphaCutOffDistance: CGFloat = 100  // after x points scrolled up, image alpha is 0
+
     func updateViewForScrollPosition(y: CGFloat, width: CGFloat) {
         // Update the size
         var height: CGFloat = -y
         
-        let minHeight: CGFloat = 100
+    //        let minHeight: CGFloat = 100
         let defaultHeight: CGFloat = 300
         if height < minHeight {
             // Prevent view from disappearing
@@ -118,9 +128,21 @@ class StickyHeaderView: UIView {
         print("height: \(height)")
 
         frame = CGRect(x: 0, y: 0, width: width, height: height)
-        
-        
-        // update alpha for animations
+                
+        // Hide content if you scroll up
+        var alpha: CGFloat = 1
+        if height < defaultHeight &&
+            height >= defaultHeight - alphaCutOffDistance {
+            alpha = (height - (defaultHeight - alphaCutOffDistance)) / alphaCutOffDistance
+        } else if height < (defaultHeight - alphaCutOffDistance) {
+            alpha = 0
+        }
+        fadeViews(alpha: alpha)
+    }
+
+    func fadeViews(alpha: CGFloat) {
+        iconImageView.alpha = alpha
+        temperatureLabel.alpha = alpha
     }
 
 }
