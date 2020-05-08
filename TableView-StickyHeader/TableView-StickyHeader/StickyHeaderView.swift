@@ -37,11 +37,17 @@ class StickyHeaderView: UIView {
         // Update the size
         var height: CGFloat = -y
         
-        let minHeight = 100
-        let defaultHeight = 300
-//        if height < minHeight {
-//
-//        }
+        let minHeight: CGFloat = 100
+        let defaultHeight: CGFloat = 300
+        if height < minHeight {
+            // Prevent view from disappearing
+            height = minHeight
+        } else if height > defaultHeight {
+            // Prevent view from growing
+            //height = defaultHeight
+        }
+        print("height: \(height)")
+
         frame = CGRect(x: 0, y: 0, width: width, height: height)
         
         
